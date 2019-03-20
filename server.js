@@ -6,14 +6,17 @@ var bodyParser = require("body-parser");
 // express config
 var app = express();
 
-// set initial port
+// initial port
 var PORT = process.env.PORT || 8080;
 
-// setup express to use data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+app.use(express.static(__dirname + '/app/public'));
 
-// router (to give map of how to respond)
+// routers
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 

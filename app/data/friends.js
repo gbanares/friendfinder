@@ -1,0 +1,1 @@
+module.exports = [{"name":"Gunther","photo":"https://imgix.bustle.com/2016/2/17/tumblr_mvjrpw1zgG1r3278yo7_1280.jpg?w=960&h=540&fit=crop&crop=faces&auto=format&q=70","answers":["3","2","3","3","3","2","2","1","2","2"]}];
